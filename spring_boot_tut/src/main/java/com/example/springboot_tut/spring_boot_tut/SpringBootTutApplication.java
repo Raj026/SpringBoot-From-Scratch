@@ -53,21 +53,34 @@ public class SpringBootTutApplication {
 		// System.out.println("Done");
 
 		// Update the user of id 52
-		Optional<User> optional = userRepository.findById(52);
+		// Optional<User> optional = userRepository.findById(52);
 
-		User user = optional.get();
+		// User user = optional.get();
 
-		user.setName("Varun");
+		// user.setName("Varun");
 
-		User result = userRepository.save(user);
-		System.out.println(result);
+		// User result = userRepository.save(user);
+		// System.out.println(result);
 
 		//How to get the data
-		Iterable<User> users = userRepository.findAll();
+		// Iterable<User> users = userRepository.findAll();
 
-		users.forEach(user -> {
-			System.out.println(user);
-		});
+		// users.forEach(user -> {
+		// 	System.out.println(user.getCity());
+		// });
+
+		// To Delete id form repository
+		// userRepository.deleteById();
+		// userRepository.deleteAll(users);
+
+		//Use custom derived Method 'findByName'
+		Iterable<User> users = userRepository.findByName("Varun");
+
+		users.forEach(res -> System.out.println(res));
+		//For more info on custom methods and supported keywords visit ->
+		// https://docs.spring.io/spring-data/jpa/docs/current-SNAPSHOT/reference/html/#reference
+
+		
 
 
 
