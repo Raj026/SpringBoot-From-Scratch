@@ -1,6 +1,7 @@
 package com.example.springboot_tut.spring_boot_tut;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,7 +27,7 @@ public class SpringBootTutApplication {
 
 		// System.out.println(user1);
 
-		//create object of user
+		// create object of user
 
 		User user1 = new User();
 		user1.setCity("Delhi");
@@ -42,14 +43,35 @@ public class SpringBootTutApplication {
 		// User resultUser = userRepository.save(user1);
 
 		// System.out.println("saved user" + resultUser);
-		List<User> users = List.of(user1, user2);
-		//save multiple objects
-		Iterable<User> result = userRepository.saveAll(users);
+		// List<User> users = List.of(user1, user2);
+		// //save multiple objects
+		// Iterable<User> result = userRepository.saveAll(users);
 
-		result.forEach(user -> {
+		// result.forEach(user -> {
+		// System.out.println(user);
+		// });
+		// System.out.println("Done");
+
+		// Update the user of id 52
+		Optional<User> optional = userRepository.findById(52);
+
+		User user = optional.get();
+
+		user.setName("Varun");
+
+		User result = userRepository.save(user);
+		System.out.println(result);
+
+		//How to get the data
+		Iterable<User> users = userRepository.findAll();
+
+		users.forEach(user -> {
 			System.out.println(user);
 		});
-		System.out.println("Done");
+
+
+
+		
 	}
 
 }
