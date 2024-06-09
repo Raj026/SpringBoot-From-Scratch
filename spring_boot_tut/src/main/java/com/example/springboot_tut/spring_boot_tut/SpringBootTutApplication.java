@@ -74,15 +74,17 @@ public class SpringBootTutApplication {
 		// userRepository.deleteAll(users);
 
 		//Use custom derived Method 'findByName'
-		Iterable<User> users = userRepository.findByName("Varun");
+		// Iterable<User> users = userRepository.findByName("Varun");
 
-		users.forEach(res -> System.out.println(res));
+		// users.forEach(res -> System.out.println(res));
 		//For more info on custom methods and supported keywords visit ->
 		// https://docs.spring.io/spring-data/jpa/docs/current-SNAPSHOT/reference/html/#reference
 
-		
-
-
+		//-->Used custom Query annotation method
+		// List<User> allUsers = userRepository.getAllUser();
+		// allUsers.forEach(r -> System.out.println(r));
+		List<User> allUsersByName = userRepository.getUserByName("Varun");
+		allUsersByName.forEach(r->System.out.println(r));
 
 		
 	}
