@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SpringBootTutApplication",
+      "request": "launch",
+      "mainClass": "com.example.springboot_tut.spring_boot_tut.SpringBootTutApplication"
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-Application<spring-boot>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
