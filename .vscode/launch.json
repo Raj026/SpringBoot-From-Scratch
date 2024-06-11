@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BootrestbookApplication",
+      "request": "launch",
+      "mainClass": "com.api.book.bootrestbook.BootrestbookApplication"
+    },
+    {
+      "type": "java",
       "name": "SpringBootTutApplication",
       "request": "launch",
       "mainClass": "com.example.springboot_tut.spring_boot_tut.SpringBootTutApplication"
