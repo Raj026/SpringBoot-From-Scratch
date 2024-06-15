@@ -2,6 +2,7 @@ package com.api.book.bootrestbook.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,24 @@ public class BookService {
             }
         }
         return "ID not Found";
+    }
+
+    //updating the book
+    public String updateBook(Books b, int id) {
+        //alternate way to handle this is using the stream
+        // list.stream().map(b->{
+        //     if(b.getId() == id) {
+        //         b.setTitle(b.getTitle());
+        //         b.setAuthor(b.getAuthor());
+        //     }
+        //     return b;
+        // }).collect(Collectors.toList());
+        for(int i=0;i<list.size();i++) {
+            if(list.get(i).getId() == id) {
+                list.set(i, b);
+                return "Updated Successfully";
+            }
+        }
+        return "ID not found";
     }
 }
