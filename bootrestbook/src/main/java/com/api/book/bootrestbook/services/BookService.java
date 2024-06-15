@@ -42,4 +42,15 @@ public class BookService {
         list.add(b);
         return b;
     }
+
+    //deleting the book
+    public String deleteBook(int id) {
+        for(Books a: list) {
+            if(a.getId() == id){
+                list.remove(a);
+                return "Successfully Deleted";
+            }
+        }
+        return "ID not Found";
+    }
 }
