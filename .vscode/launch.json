@@ -21,6 +21,26 @@
       "projectName": "spring-boot",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-BootrestbookApplication<bootrestbook>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.api.book.bootrestbook.BootrestbookApplication",
+      "projectName": "bootrestbook",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-SpringBootTutApplication<spring_boot_tut>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.springboot_tut.spring_boot_tut.SpringBootTutApplication",
+      "projectName": "spring_boot_tut",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
