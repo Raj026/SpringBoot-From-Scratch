@@ -36,4 +36,10 @@ public class BookService {
         return res;
 
     }
+
+    // adding the book
+    public Books addBook(Books b) {
+        list.add(b);
+        return b;
+    }
 }
