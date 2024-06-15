@@ -1,10 +1,12 @@
 package com.api.book.bootrestbook.entities;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,9 +17,12 @@ public class Books {
     @Column(name = "book_id")
     private int id;
     private String title;
-    private String author;
 
-    public Books(int id, String title, String author) {
+    //Book has author but no book object in author thus we will perform uni-directional mapping
+    @OneToOne(cascade = CascadeType.ALL)
+    private Author author;
+
+    public Books(int id, String title, Author author) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -42,11 +47,11 @@ public class Books {
         this.title = title;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
