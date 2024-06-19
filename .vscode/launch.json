@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SpringbootvalidationApplication",
+      "request": "launch",
+      "mainClass": "com.example.springbootvalidation.springbootvalidation.SpringbootvalidationApplication"
+    },
+    {
+      "type": "java",
       "name": "ThymeleafpracticalApplication",
       "request": "launch",
       "mainClass": "com.thymeleafpractical.thymeleafpractical.ThymeleafpracticalApplication",
