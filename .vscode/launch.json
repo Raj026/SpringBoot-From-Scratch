@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ThymeleafpracticalApplication",
+      "request": "launch",
+      "mainClass": "com.thymeleafpractical.thymeleafpractical.ThymeleafpracticalApplication",
+      "projectName": "thymeleafpractical"
+    },
+    {
+      "type": "java",
       "name": "BootrestbookApplication",
       "request": "launch",
       "mainClass": "com.api.book.bootrestbook.BootrestbookApplication"
