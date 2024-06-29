@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SmartcontactApplication",
+      "request": "launch",
+      "mainClass": "com.smartcontact.smartcontact.SmartcontactApplication"
+    },
+    {
+      "type": "java",
       "name": "SpringbootvalidationApplication",
       "request": "launch",
       "mainClass": "com.example.springbootvalidation.springbootvalidation.SpringbootvalidationApplication"
